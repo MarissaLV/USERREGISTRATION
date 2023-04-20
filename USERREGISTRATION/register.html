@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/mystyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="container">
+        <center>
+            <h1>Bienvenidos al sistema de registro escolar</h1>
+        </center>
+    </header>
+
+    <main class="container">
+        <center>
+            <h2>Registrar nuevo estudiante</h2>
+        </center>
+
+        <div class="form">
+            <!--matricula(id automatico),nombre,correo,genero,campus,calificacionA, calificacion B, calificacion C-->
+            <!--<label>Matricula:<input type="text" placeholder="Ingresa la matricula del alumno" id="txtMatricula"></label>-->
+
+            <label>Nombre:</label><input class="form-control" type="text" placeholder="Ingresa el nombre del alumno" id="txtNombre">
+            <label>Correo:</label><input class="form-control" type="text" placeholder="Ingresa el correo" id="txtCorreo">
+
+            <label>Sexo</label>
+            <select class="form-select form-select-sm" id="txtGenero">
+                <option selected>--genero--</option>
+                <option value="Femenino"> Femenino</option>
+                <option value="Masculino">Masculino</option>
+            </select>
+
+            <label>Turno</label>
+            <select name="txtturno" id="txtTurno" class="form-select">
+                <option value="Matutino">Matutino</option>
+                <option value="Vespertino">Vespertino</option>
+                <option value="Mixto">Mixto</option>
+            </select>
+
+            <!--<label>Campus:<input type="text" placeholder="Ingresa el campus" id="txtCampus"></label>-->
+            <label>Campus:</label>
+                <select id="SelCampus" class="form-select" aria-label="Default select example">
+                    <option selected>--Selecciona tu campus--</option>
+                    <option value="Mexicali"> Mexicali</option>
+                    <option value="Tijuana">Tijuana</option>
+                    <option value="Ensenada">Ensenada</option>
+                </select>
+
+            <label>CalificacionA:</label><input class="form-control" type="number" min="1" placeholder="Ingresa la calificacion A" id="numCalifA"></label>
+            <label>CalificacionB:</label><input class="form-control" type="number" min="1" placeholder="Ingresa la calificacion B" id="numCalifB"></label>
+            <label>CalificacionC:</label><input class="form-control" type="number" min="1" placeholder="Ingresa la calificacion B" id="numCalifC"></label>
+
+                <button class="btn btn-dark" onclick="Registrar();">Registrar</button>
+        </div>
+
+    </main>
+    <section class="container">
+        <h2>Lista de estudiantes</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>nombre</th>
+                    <th>correo</th>
+                    <th>turno</th>
+                    <th>campus</th>
+                    <th>califA</th>
+                    <th>califB</th>
+                    <th>califC</th>
+                    <th>promedio</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="alumnosTabla">
+                <!-- <tr>
+                    <td>${alumnos[i].nombre]}</td>
+                    <td>${alumnos[i].correo]}</td>
+                    <td>${alumnos[i].genero]}</td>
+                    <td>${alumnos[i].campus]}</td>
+                    <td>${alumnos[i].califA]}</td>
+                    <td>${alumnos[i].califB]}</td>
+                    <td>${alumnos[i].califC]}</td>
+                </tr>-->
+
+            </tbody>
+
+        </table>
+    </section>
+
+
+    <script src="scripts/register.js"></script>
+    <!--<script src="scripts/display.js"></script>-->
+</body>
+
+</html>

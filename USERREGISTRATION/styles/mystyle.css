@@ -1,0 +1,23 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    background-color: rgb(2, 71, 37);
+    color: rgb(158, 148, 7);
+    border-bottom: 3px solid rgb(60, 207, 40);
+    border-bottom-width: 1rem;
+}
+
+button{
+    background-color: black;
+    font-size: 1.8rem;
+    color: white;
+    border-radius: 3px;
+    border:none;
+    padding: 1rem;
+    }
+
+    
+
+    
